@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/main.css">
+  </head>
+  <body>
+    <div class="container">
+      {% if quote %}
+        <div class="jumbotron">
+            <h1>{{ quote.author }}</h1>
+            <p>{{ quote.quote }}</p>
+        </div>
+      {% endif %}
+        <form>
+          <div class="form-group">
+            <label>author</label>
+            <input name="q" type="text">
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+    </div>
+  </body>
+</html>
